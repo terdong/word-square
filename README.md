@@ -1,2 +1,2 @@
 # word-square
-English learning app created in 2012
+English learning andorid app created in 2012
