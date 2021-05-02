@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/game_layout_top_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_banner"
+            android:gravity="right" >
+
+            <Button
+                android:id="@+id/game_btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_back" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/game_layout_top_btn"
+            android:layout_gravity="center"
+            android:layout_margin="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/game_layout_table_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/game_btn_back"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/back_board" >
+
+                <TableLayout
+                    android:id="@+id/game_table_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/play_start"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp" >
+
+                    <TableRow android:id="@+id/game_back_board1" 
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_weight="1"
+                                android:src="@drawable/play_panel_count" />
+
+                            <com.teamgehem.widget.custom.impl.CustomViewNumber
+                                android:id="@+id/game_count_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_weight="1"
+                                android:src="@drawable/play_panel_combo" />
+
+                            <com.teamgehem.widget.custom.impl.CustomViewNumber
+                                android:id="@+id/game_combo_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/play_panel_score" />
+
+                        <com.teamgehem.widget.custom.impl.CustomViewNumber
+                            android:id="@+id/game_score_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/game_back_board2"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_weight="1" >
+
+                            <ImageView
+                                android:id="@+id/game_combo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/play_combo" />
+
+                            <com.teamgehem.widget.custom.impl.CustomViewTime
+                                android:id="@+id/game_time_num"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="5dp" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/game_back_board3"
+                        android:layout_weight="1" >
+
+                        <ProgressBar
+                            android:id="@+id/game_progressbar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:indeterminateOnly="false"
+                            android:max="30"
+                            android:maxHeight="20dp"
+                            android:minHeight="20dp"
+                            android:progress="30"
+                            android:progressDrawable="@drawable/progressbar_color" />
+                    </TableRow>
+                </TableLayout>
+
+                <ImageView
+                    android:id="@+id/game_combo_effect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/play_combo_effect"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <TableLayout
+                android:id="@+id/game_table_word"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/game_layout_table_page"
+                android:layout_marginTop="5dp"
+                android:gravity="center" >
+
+                <TableRow android:gravity="center" >
+
+                    <com.teamgehem.widget.custom.impl.CustomButtonWord
+                        android:id="@+id/game_btn_word_00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/btn_word"
+                        android:clickable="true" />
+
+                    <com.teamgehem.widget.custom.impl.CustomButtonWord
+                        android:id="@+id/game_btn_word_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/btn_word"
+                        android:clickable="true" />
+                </TableRow>
+
+                <TableRow android:gravity="center" >
+
+                    <com.teamgehem.widget.custom.impl.CustomButtonWord
+                        android:id="@+id/game_btn_word_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/btn_word"
+                        android:clickable="true"
+                        android:textColor="@color/white" />
+
+                    <com.teamgehem.widget.custom.impl.CustomButtonWord
+                        android:id="@+id/game_btn_word_03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/btn_word"
+                        android:clickable="true" />
+                </TableRow>
+
+                <TableRow android:gravity="center" >
+
+                    <com.teamgehem.widget.custom.impl.CustomButtonWord
+                        android:id="@+id/game_btn_word_04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/btn_word"
+                        android:clickable="true" />
+
+                    <com.teamgehem.widget.custom.impl.CustomButtonWord
+                        android:id="@+id/game_btn_word_05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/btn_word"
+                        android:clickable="true" />
+                </TableRow>
+
+                <TableRow android:gravity="center" >
+
+                    <com.teamgehem.widget.custom.impl.CustomButtonWord
+                        android:id="@+id/game_btn_word_06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/btn_word"
+                        android:clickable="true" />
+
+                    <com.teamgehem.widget.custom.impl.CustomButtonWord
+                        android:id="@+id/game_btn_word_07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/btn_word"
+                        android:clickable="true" />
+                </TableRow>
+            </TableLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/game_ad_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="0" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/intro_corp" />
+        </LinearLayout>
+
+            <com.cauly.android.ad.AdView
+                xmlns:app="http://schemas.android.com/apk/res/com.teamgehem.wordsquarelite"
+                android:id="@+id/cauly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                app:adtype="cpc"
+                app:age="all"
+                app:allowcall="yes"
+                app:appcode="eR63eyQ0"
+                app:dynamicReloadInterval="true"
+                app:effect="bottom_slide"
+                app:gender="all"
+                app:gps="off"
+                app:reloadInterval="30"
+                android:visibility="visible" />
+    </FrameLayout>
+
+</RelativeLayout>

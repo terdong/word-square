@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_black"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/result_layout_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal" >
+
+        <ImageView
+            android:id="@+id/result_text_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/result_text" />
+
+        <LinearLayout
+            android:id="@+id/result_layout_image_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/result_text_result"
+            android:background="@drawable/result_box_small"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:src="@drawable/result_text_count" />
+
+            <com.teamgehem.widget.custom.impl.CustomViewNumber
+                android:id="@+id/result_image_count_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/result_box_small_box" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/result_text_result"
+            android:layout_toRightOf="@id/result_layout_image_count"
+            android:background="@drawable/result_box_small"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:src="@drawable/result_text_combo" />
+
+            <com.teamgehem.widget.custom.impl.CustomViewNumber
+                android:id="@+id/result_image_combo_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/result_box_small_box" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/result_layout_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/result_layout_image_count"
+            android:background="@drawable/result_box_score"
+            android:gravity="center" >
+
+            <com.teamgehem.widget.custom.impl.CustomViewNumber
+                android:id="@+id/result_image_score01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/result_score_1" />
+
+            <com.teamgehem.widget.custom.impl.CustomViewNumber
+                android:id="@+id/result_image_score02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@id/result_image_score01"
+                android:background="@drawable/result_score_2" />
+
+            <com.teamgehem.widget.custom.impl.CustomViewNumber
+                android:id="@+id/result_image_score03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@id/result_image_score02"
+                android:background="@drawable/result_score_3" />
+
+            <com.teamgehem.widget.custom.impl.CustomViewNumber
+                android:id="@+id/result_image_score04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/result_image_score03"
+                android:background="@drawable/result_score_4" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/result_image_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result_layout_score"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp" />
+
+    <Button
+        android:id="@+id/result_btn_replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result_image_grade"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:clickable="false"
+        android:background="@drawable/btn_replay" />
+
+    <Button
+        android:id="@+id/result_btn_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/result_btn_replay"
+        android:layout_toLeftOf="@id/result_btn_replay"
+        android:clickable="false"
+        android:background="@drawable/btn_menu" />
+
+    <Button
+        android:id="@+id/result_btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/result_btn_replay"
+        android:layout_toRightOf="@id/result_btn_replay"
+        android:clickable="false"
+        android:background="@drawable/btn_next" />
+
+    <FrameLayout
+        android:id="@+id/result_ad_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="0" >
+
+        <com.cauly.android.ad.AdView
+            xmlns:app="http://schemas.android.com/apk/res/com.teamgehem.wordsquarelite"
+            android:id="@+id/cauly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:adtype="cpc"
+            app:age="all"
+            app:allowcall="yes"
+            app:appcode="eR63eyQ0"
+            app:dynamicReloadInterval="true"
+            app:effect="bottom_slide"
+            app:gender="all"
+            app:gps="off"
+            app:reloadInterval="30"
+            android:visibility="visible" />
+    </FrameLayout>
+
+</RelativeLayout>

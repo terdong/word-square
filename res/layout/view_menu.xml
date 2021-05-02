@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_banner" >
+
+        <Button
+            android:id="@+id/menu_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_back" />
+
+        <Button
+            android:id="@+id/menu_btn_chapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/tab_chapter" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menu_btn_back"
+        android:layout_margin="10dp" >
+
+        <TableLayout
+            android:id="@+id/menu_table_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/back_board"
+            android:gravity="center_horizontal" >
+
+            <TableRow
+                android:id="@+id/menu_back_board1"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal" >
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/menu_back_board2"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal" >
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/menu_table_stage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menu_table_page"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/intro_corp" />
+    </RelativeLayout>
+
+</LinearLayout>

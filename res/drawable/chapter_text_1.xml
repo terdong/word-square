@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item android:state_pressed="true" android:drawable="@drawable/set_chapter_push_text_1" />
+	<item android:state_selected="true" android:drawable="@drawable/set_chapter_push_text_1" />
+	<item android:drawable="@drawable/set_chapter_text_1" />
+
+</selector>

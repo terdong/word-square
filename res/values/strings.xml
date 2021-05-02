@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, WordSquareActivity!</string>
+    <string name="app_name">wordsquare lite</string>
+    <string name="game_back_msg">다시 누르면, 게임이 종료됩니다.</string>
+    <string name="menu_back_msg">종료하시려면 한번 더 눌러주세요.</string>
+
+</resources>
